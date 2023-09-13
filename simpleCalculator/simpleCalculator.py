@@ -38,3 +38,5 @@ while True:
         elif user_input == "divide":
             result = divide(num1, num2)
         print("Result: ", result)
+    else:
+        print("Invalid input. Please try again.")
