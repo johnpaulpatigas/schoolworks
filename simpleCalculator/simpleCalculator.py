@@ -23,3 +23,6 @@ while True:
     print("Enter 'quit' to end the program")
 
     user_input = input(": ")
+
+    if user_input == "quit":
+        break
