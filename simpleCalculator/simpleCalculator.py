@@ -14,7 +14,7 @@ def divide(x, y):
         return "Division by zero is not allowed"
     return x / y
 
-while True:
+def display_menu():
     print("Options:")
     print("Enter 'add' for addition")
     print("Enter 'subtract' for subtraction")
@@ -22,7 +22,12 @@ while True:
     print("Enter 'divide' for division")
     print("Enter 'quit' to end the program")
 
-    user_input = input(": ")
+def get_user_input():
+    return input(": ")
+
+while True:
+    display_menu()
+    user_input = get_user_input()
 
     if user_input == "quit":
         break
