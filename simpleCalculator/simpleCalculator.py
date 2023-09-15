@@ -10,8 +10,6 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    if y == 0:
-        return "Division by zero is not allowed"
     return x / y
 
 def display_menu():
@@ -42,7 +40,11 @@ while True:
     if user_input in operations:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
-        result = operations[user_input](num1, num2)
-        print("Result:", result)
+
+        if user_input == "divide" and num2 == 0:
+            print("Division by zero is not allowed")
+        else:
+            result = operations[user_input](num1, num2)
+            print("Result:", result)
     else:
         print("Invalid input. Please try again.")
