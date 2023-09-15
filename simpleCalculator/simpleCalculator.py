@@ -38,13 +38,16 @@ while True:
         break
 
     if user_input in operations:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
 
-        if user_input == "divide" and num2 == 0:
-            print("Division by zero is not allowed")
-        else:
-            result = operations[user_input](num1, num2)
-            print("Result:", result)
+            if user_input == "divide" and num2 == 0:
+                print("Division by zero is not allowed")
+            else:
+                result = operations[user_input](num1, num2)
+                print("Result:", result)
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
     else:
         print("Invalid input. Please try again.")
