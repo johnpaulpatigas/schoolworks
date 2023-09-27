@@ -34,7 +34,7 @@ operations = {
 
 while True:
     display_menu()
-    user_input = get_user_input()
+    user_input = get_user_input().lower()
 
     if user_input == "quit":
         break
