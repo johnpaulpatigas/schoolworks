@@ -1,3 +1,3 @@
-# dBms
+# dB2ms
 
-A simple decibel per second to millisecond calculator written in Python
+A simple decibel per second to millisecond conversion calculator written in Python
